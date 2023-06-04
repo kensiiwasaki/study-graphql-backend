@@ -6,3 +6,10 @@ const typeDefs = gql`
     info: String!
   }
 `;
+
+// リゾルバ関数
+const resolvers = {
+  Query: {
+    info: () => 'HackerNewsクローン',
+  },
+};
