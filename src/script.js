@@ -13,3 +13,12 @@ async function main() {
   const allLinks = await prisma.link.findMany();
   console.log(allLinks);
 }
+
+main()
+  .catch((e) => {
+    throw e;
+  })
+  .finally(async () => {
+    //データベース接続を閉じる
+    prisma.$disconnect;
+  });
