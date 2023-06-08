@@ -10,7 +10,7 @@ const prisma = new PrismaClient();
 const resolvers = {
   Query: {
     info: () => 'HackerNewsクローン',
-    feed: () => async (parent, args, context) => {
+    feed: async (parent, args, context) => {
       return context.prisma.link.findMany();
     },
   },
