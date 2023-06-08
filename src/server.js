@@ -2,6 +2,10 @@ const { ApolloServer, gql } = require('apollo-server');
 const fs = require('fs');
 const path = require('path');
 
+const { PrismaClient } = require('@prisma/client');
+
+const prisma = new PrismaClient();
+
 // HackerNewsの１つ１つの投稿(テストデータ)
 let links = [
   {
