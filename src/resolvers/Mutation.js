@@ -2,7 +2,7 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-APP_SECRET = require('../utils');
+const { APP_SECRET } = require('../utils');
 
 async function signup(parent, args, context) {
   // パスワードの設定(ハッシュ化)
@@ -40,7 +40,7 @@ async function login(parent, args, context) {
   }
 
   // パスワードが正しいとき
-  const token = jwt.sign({ userId: user.id }.APP_SECRET);
+  const token = jwt.sign({ userId: user.id }, APP_SECRET);
 
   return {
     token,
