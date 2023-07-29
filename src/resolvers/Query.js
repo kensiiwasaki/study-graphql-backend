@@ -2,6 +2,6 @@ function feed(parent, args, context) {
   return context.prisma.link.findMany();
 }
 
-modules.exports = {
+module.exports = {
   feed,
 };
