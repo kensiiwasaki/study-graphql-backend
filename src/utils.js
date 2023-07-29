@@ -31,7 +31,7 @@ function getUserId(req, authToken) {
   throw new Error('認証権限がありません');
 }
 
-modules.exports = {
+module.exports = {
   APP_SECRET,
   getUserId,
 };
