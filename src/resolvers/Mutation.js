@@ -2,7 +2,7 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-APP_SECRET = 'Graphql';
+APP_SECRET = require('../utils');
 
 async function signup(parent, args, context) {
   // パスワードの設定(ハッシュ化)
