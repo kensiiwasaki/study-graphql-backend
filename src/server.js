@@ -16,6 +16,7 @@ const User = require('./resolvers/User');
 const { PubSub } = require('apollo-server');
 
 const prisma = new PrismaClient();
+const pubsub = new PubSub();
 
 // リゾルバ関数
 const resolvers = {
