@@ -12,6 +12,8 @@ const Link = require('./resolvers/Link');
 const User = require('./resolvers/User');
 
 // サブスクリプションの実装
+// Publisher(送信者)/Subscriber(受信者)
+const { PubSub } = require('apollo-server');
 
 const prisma = new PrismaClient();
 
