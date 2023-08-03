@@ -11,6 +11,8 @@ const Mutation = require('./resolvers/Mutation');
 const Link = require('./resolvers/Link');
 const User = require('./resolvers/User');
 
+// サブスクリプションの実装
+
 const prisma = new PrismaClient();
 
 // リゾルバ関数
