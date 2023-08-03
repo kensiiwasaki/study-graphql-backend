@@ -90,10 +90,16 @@ async function vote(parent, args, context) {
       link: { connect: { id: Number(args.linkId) } },
     },
   });
+
+  // 送信
+  context.pubsub.publish('NEW_VOTE', newVote);
+
+  return newVote;
 }
 
 module.exports = {
   signup,
   login,
   post,
+  vote,
 };
